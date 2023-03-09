@@ -1,0 +1,442 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #244930;
+    width: 100%;
+    padding: 2.5em 0;
+    text-align: center;
+}
+
+
+/******** HOMEPAGE ********/
+
+
+
+
+#mainelement {
+    background: gray;
+    opacity: 70%;
+    box-shadow: 3px 3px 6px 6px black;
+    transition: .5s ease;
+}
+
+#mainelement:hover {
+    background: white;
+    opacity: 90%;
+    box-shadow: 3px 3px 6px 6px black;
+    transition: .5s ease;
+}
+    
+    
+#textbox {
+	height: 100px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    
+    padding: 2.5em;
+    width: 70%;
+    line-height: 1.6em;
+    font-size: 20px;
+}
+
+#textbox h1,
+#textbox p,
+#textbox a {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+#textbox2 {
+    height: 100px;
+    position: absolute;
+    top: 136%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    
+    padding: 2.5em;
+    width: 70%;
+    line-height: 1.6em;
+    font-size: 20px;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(10px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.hometextout {
+font-family: sans-serif;
+color: white;
+position: absolute;
+font-size: 20px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); /* KEEPS THE TEXT CENTERED */
+}
+
+
+.home-container {
+    padding: 2.5em;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+.maintabs {
+    position: relative;
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.home-image {
+    display: block;
+    width: 500px;
+    height: 500px;
+}
+
+.homeoverlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color: #ff956be8;
+    opacity: 0;
+    transition:all .3s ease;
+}
+
+.hometext {
+    font-family: sans-serif;
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* KEEPS THE TEXT CENTERED */
+}
+
+.maintabs:hover .homeoverlay {
+opacity: 1;
+}
+
+.parallax {
+background-image: url("images/flowers1.jpg");
+
+min-height: 500px; 
+margin-top: 290px;
+
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.parallax2 {
+background-image: url("images/flowers2.jpg");
+opacity: 70%;
+
+min-height: 500px; 
+margin-top: 290px;
+
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+/******** NAVIGATION ********/
+
+nav ul {
+    background-color: #bc697e;
+    color: white;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 1.25rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+nav ul li:hover {
+    background-color: #ff956be8;
+    cursor: pointer;
+    transition: 800ms;
+}
+
+
+
+/******** PRODUCT PAGE ********/
+
+
+.for-sale-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    
+    grid-column-gap: 10px;
+    grid-row-gap: 25px;
+    background-color: 	#57693a;
+    padding: 10px;
+    border-radius: 10px;
+}
+.item {
+    background-color: 	#c7c59e;
+    border: 1px solid #fff;
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+}
+.products h1{
+    text-align: center;
+    font-family:Bookman, URW Bookman L, serif;
+    font-size: 60px;
+    font-stretch:ultra-expanded;
+ 
+}
+
+.products h2{
+    font-size: 20px;
+    font-family:Bookman, URW Bookman L, serif;
+    text-align: center;
+    font-style: italic;
+}
+
+.for-sale-container img{
+    border-radius: 30px; 
+    width: 200px;
+    align-items: left;
+}
+.for-sale-container h3{
+    font-size: 30px;
+    font-family:Bookman, URW Bookman L, serif;
+    text-align: center;
+    font-style: italic;
+
+}
+.text{
+    text-align: center;
+    font-family:Bookman, URW Bookman L, serif;
+
+}
+
+
+
+
+
+/******** CONTACT FORM AND INFORMATION ********/
+#contact-container {
+    padding: 2.5em;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.5em;
+    font-size: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 2.5em;
+    grid-template-areas:
+        ". .";
+}
+
+#contact-info {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+}
+
+#contact-info h1 {
+    font-size: 2em;
+}
+
+#contact-info h2 {
+    padding-top: .75em;
+}
+
+#contact-info img {
+    vertical-align: middle;
+}
+
+span {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.25em;
+}
+
+form input,
+textarea {
+    font-size: 18px;
+    width: 98%;
+    resize: none;
+    padding: 0.75em;
+    margin-top: 0.375em;
+    margin-bottom: 1em;
+    border: 0.188em solid black;
+}
+
+textarea {
+    height: 30em;
+}
+
+input[type=submit] {
+    background-color: #244930e4;
+    color: white;
+    border: none;
+    padding: 2em 3em;
+}
+
+input[type=submit]:hover {
+    background-color: #ff956be8;
+    cursor: pointer;
+    transition: 800ms;
+}
+
+ /***************ABOUT US PAGE INFORMATION**********************/
+
+ #AboutUS img {
+    size: fixed;
+ }
+
+ #AboutUS {
+    align-content: center;
+    padding: 10px;
+ }
+
+ #AboutUS h3 {
+    font-family: Times New Roman;
+ }
+
+ #AboutUS pre {
+    font-family: Times New Roman;
+ }
+
+ #AboutUS h2 {
+    color: white;
+    background-color: #244930;
+    text-align: center;
+ }
+
+ .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+ .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    box-sizing: border-box;
+}
+
+/******** FOOTER ********/
+footer {
+    background-color: #244930e4;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 1em;
+    left: 0;
+    bottom: 0;
+
+}
+
+/******** MEDIA QUERIES ********/
+
+@media only screen and (max-width: 1500px) {
+    #contact-container {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px;
+        grid-template-areas:
+            "."
+            ".";
+    }
+
+    #contact-info {
+        width: 100%;
+        background-color: #FFFFFF;
+        border-collapse: collapse;
+        padding-bottom: 20px;
+    }
+
+    #contact-info h1 {
+        font-size: 2em;
+    }
+
+    #contact-info h2 {
+        padding-top: .75em;
+    }
+
+}
+
+
+/* @media only screen and (max-device-width: 1366px) { 
+    .parallax {
+    background-attachment: scroll;
+    } */
+	
+	@media only screen and (max-device-width: 1366px) {
+		#textbox {
+    height: 1em;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    
+    padding: 2.5em;
+    width: 70%;
+    line-height: 1.6em;
+    font-size: 20px;
+	}
+	#textbox2 {
+    height: 1em;
+    position: absolute;
+    top: 280%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    
+    padding: 2.5em;
+    width: 70%;
+    line-height: 1.6em;
+    font-size: 20px;
+}
+}
+}
+	
